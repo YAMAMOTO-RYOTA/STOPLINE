@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+   <!-- 基本タグ -->
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+   <!-- SEO対策 -->
+   <title>STOPLINE公式サイト</title>
+   <link rel="icon" href="./img/STOPLINE_Logo.jpg">
+   <meta name="descriptions" content="STOPLINE公式サイトです。
+      Unityで制作した2Dゲームで、線を引いてボールをゴール地点まで届ける
+      シンプルなゲームとなっております。ステージは50ステージあり、やりがいのあるゲームと
+      なっております。"
+   >
+   
+   <!-- 読み込み -->
+   <link rel="stylesheet" href="./style.css">
+
+   <!-- jQuery スライダーフォト-->
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+   <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+
+   <script type="text/javascript">
+      $(document).ready(function(){
+         $('.slider').bxSlider({
+            auto: true,
+            pause: 5000,
+         });
+      });
+   </script>
+
+   <!--スムーズスクロール実装-->
+   <script>
+      $(function(){
+        // #で始まるリンクをクリックしたら実行されます
+        $('a[href^="#"]').click(function() {
+          // スクロールの速度
+          let speed = 700; // ミリ秒で記述
+          let href= $(this).attr("href");
+          let target = $(href == "#" || href == "" ? 'html' : href);
+          let position = target.offset().top;
+          $('body,html').animate({scrollTop:position}, speed, 'swing');
+          return false;
+        });
+      });
+    </script>
+</head>
+<body>
+   <Header>
+      <h1 class="headline">
+         <a href="#">STOPLINE公式サイト</a>
+      </h1>
+      <nav class="pc-navi">
+         <ul class="h_menu">
+            <li class="drawer-item">
+               <a href="#">Top</a>
+            </li>
+            <li class="h_menu">
+               <a href="#Download">DL</a>
+            </li>
+            <li class="h_menu">
+               <a href="#Photo">Photo</a>
+            </li>
+            <li class="h_menu">
+               <a href="#Information">Info</a>
+            </li>
+         </ul>
+      </nav>
+   </Header>
+
+   <main>
+      <!-- Top -->
+      <section class="top-view" id="#">
+         <div class="layout_2_div">
+            <img src="./img/STOPLINE_Logo.jpg" alt="" width="400">
+            <h1>STOPLINE</h1>
+            <a href="https://ph19-ryota.github.io/Portfolio.html/#" target="_blank">
+               <p><b>YamamotoRyota</b></p>
+            </a>
+            <p><b>ミニゲーム</b></p>
+         </div>
+      </section>
+      
+      <!-- DL -->
+      <section id="Download">
+         <p>広告を含まない・アプリ内課金なし</p>
+         <p>このゲームはパソコンにてプレイ可能です</p>
+         <button><a href="https://ryqta-shop.booth.pm/items/2382677" target="_blank">ダウンロード</a></button>
+      </section>
+
+      <!-- Photo -->
+      <section id="Photo">
+         <div class="slider" width=70%>
+            <img src="./img/rule_gameplay.png"  alt="">
+            <img src="./img/rule_gameclear.png" alt="">
+            <img src="./img/rule_gameover.png"  alt="">
+            <img src="./img/STAGE1.png"  alt="">
+            <img src="./img/STAGE10.png" alt="">
+            <img src="./img/STAGE20.png" alt="">
+            <img src="./img/STAGE30.png" alt="">
+            <img src="./img/STAGE40.png" alt="">
+            <img src="./img/STAGE50.png" alt="">
+         </div>
+      </section>
+
+      <!-- Info -->
+      <section id="Information">
+         <table class="info-table" align="center">
+            <tr>
+               <th>更新日</th><th>サイズ</th><th>インストール</th>
+            </tr>
+            <tr align="center">
+               <td>2021年4月29日</td><td>100M以下</td><td>無料</td>
+            </tr>
+            <tr>
+               <th>現在のバージョン</th><th>ゲーム内課金</th><th>コンテンツのレーディング</th>
+            </tr>
+            <tr align="center">
+               <td>1.0</td><td>なし</td><td>3歳以上</td>
+            </tr>
+            <tr>
+               <th>提供元</th><th>開発元</th><th>製作ソフト</th>
+            </tr>
+            <tr align="center">
+               <td><a href="https://ph19-ryota.github.io/Portfolio.html/#" target="_blank">Yamamoto Ryota</a></td>
+               <td><a href="https://ph19-ryota.github.io/Portfolio.html/#" target="_blank">Yamamoto Ryota</a></td>
+               <td><a href="https://unity.com/ja" target="_blank">Unity</a></td>
+            </tr>
+         </table>
+      </section>
+   </main>
+
+   <footer>
+      <div class="container">
+         <p class="copyright">
+            Copyright Ⓒ 2021 Created by YamamotoRyota
+         </p>
+      </div>
+   </footer>
+</body>
+</html>
